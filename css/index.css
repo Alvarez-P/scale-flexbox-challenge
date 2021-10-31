@@ -1,0 +1,306 @@
+/************************************************************
+                        GENERAL 
+************************************************************/
+
+/** Values **/
+
+:root {
+  --main-color: #818181;
+  --second-main-color: #f0f0f0;
+  --light-color: #fff;
+  --contrast-color: #f24360;
+  --extra-color: #696969;
+  --dark-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light-color);
+}
+figure img {
+  width: 100%;
+}
+
+/** Base Classes **/
+
+.div-title {
+  padding: 50px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.div-title h3 {
+  color: var(--contrast-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.div-title h1 {
+  color: var(--dark-color);
+  font-weight: 400;
+  font-size: 2rem;
+}
+.div-title h1 b {
+  font-weight: 600;
+}
+.div-underline {
+  background-color: var(--contrast-color);
+  width: 50px;
+  height: 2px;
+}
+.div-line-separator {
+  background-color: var(--second-main-color);
+  width: 100%;
+  height: 2px;
+}
+/************************************************************
+                    HEADER - MOSAIC
+************************************************************/
+.div-mosaic {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+  gap: 20px;
+  margin: auto;
+}
+.div-mosaic-item {
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.div-mosaic-item figure {
+  max-height: 300px;
+}
+.div-mosaic-item:hover .mosaic-item-info {
+  top: calc(0% + 5px);
+}
+.mosaic-item-info {
+  background-color: var(--light-color);
+  opacity: 0.95;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  top: 100%;
+  left: 5px;
+  transition: all 1s;
+}
+.mosaic-item-info a i {
+  display: inline-block;
+  border-radius: 60px;
+  background-color: var(--contrast-color);
+  color: var(--light-color);
+  padding: 0.7em 0.7em;
+}
+
+/************************************************************
+                    SECTION - TEAM
+************************************************************/
+.div-team {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1100px;
+  justify-content: space-around;
+  margin: auto;
+}
+.div-team-member {
+  width: calc(25% - 10px);
+  min-width: 200px;
+}
+.div-member-img {
+  filter: grayscale(100%);
+  overflow: hidden;
+  height: 330px;
+}
+.div-member-img:hover {
+  filter: grayscale(0%);
+}
+.div-member-img:hover img {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+.div-team-member {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 30px 0;
+}
+.div-member-data h2 {
+  font-size: 1rem;
+}
+.div-member-data h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.div-social-networks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.div-social-networks a i {
+  color: var(--main-color);
+}
+
+/************************************************************
+                    SECTION - PRICES
+************************************************************/
+.sec-prices {
+  width: 100%;
+  background-color: var(--second-main-color);
+}
+.div-plans {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1100px;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 40px;
+}
+.div-package {
+  background-color: var(--light-color);
+  min-width: 250px;
+  width: calc(33% - 10px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.div-package:hover {
+  transform: translateY(5px);
+  transition: all 0.5s;
+  box-shadow: 0 5px 15px var(--main-color);
+}
+.div-plan-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.div-plan-head i {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+.div-price {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.div-price span {
+  color: var(--contrast-color);
+}
+.div-price sup {
+  color: var(--dark-color);
+}
+.div-price h1 {
+  font-size: 3rem;
+}
+.div-package ul {
+  list-style-type: none;
+  color: var(--main-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.div-package ul li {
+  padding: 10px 0;
+}
+.btn-purchase {
+  border: 2px solid var(--dark-color);
+  border-radius: 2px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--dark-color);
+  padding: 10px 8px;
+}
+.btn-purchase:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+/************************************************************
+                    SECTION - BLOG
+************************************************************/
+.div-blog-articles {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1100px;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 100px;
+}
+.blog-article {
+  width: calc(33% - 15px);
+  min-width: 250px;
+  box-shadow: 0 5px 10px var(--extra-color);
+  overflow: hidden;
+}
+.div-article-img {
+  overflow: hidden;
+  height: 220px;
+}
+.div-article-img:hover img {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+.article-content {
+  padding: 25px;
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  color: var(--main-color);
+}
+.article-head a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 0.8rem;
+}
+.article-head {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+.article-head h1 {
+  font-size: 1rem;
+  color: var(--extra-color);
+}
+.article-head a:hover,
+.article-head span {
+  color: var(--contrast-color);
+}
+.article-head h4,
+.article-abstract {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.article-abstract {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+.article-abstract a {
+  color: var(--main-color);
+}
+.article-abstract a:hover {
+  text-decoration: none;
+}
